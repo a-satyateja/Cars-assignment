@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1>Car list component</h1>
+  <div class="row">
+    <div class="carlist-wrapper">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Car manufacturer</th>
+                <th>model</th>
+                <th>price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let car of carlist">
+                <td>{{car.manufacturer}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.price}}</td>
+                <td><button class="edit btn btn-warning" (click)="onEdit(car.manufacturer)">Edit</button></td>
+                <td><button class="edit btn btn-danger" (click)="deleteCar(car.manufacturer)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
